@@ -15,15 +15,28 @@
     header {
       background: #0a1628;
       border-bottom: 3px solid #d4a017;
-      padding: 20px;
+      padding: 16px 20px;
       text-align: center;
     }
-    header h1 { color: #d4a017; font-size: 1.6rem; letter-spacing: 1px; }
-    header p { color: #aaa; font-size: 0.85rem; margin-top: 4px; }
+    header h1 { color: #d4a017; font-size: 1.4rem; letter-spacing: 1px; }
+    header p { color: #aaa; font-size: 0.8rem; margin-top: 4px; }
+
+    /* BANNER */
+    .banner-wrap {
+      width: 100%;
+      background: #060e1c;
+      border-bottom: 3px solid #d4a017;
+    }
+    .banner-wrap img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
 
     .hero {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 50px 20px 30px;
       max-width: 700px;
       margin: 0 auto;
     }
@@ -52,7 +65,6 @@
       line-height: 1.8;
       margin-bottom: 30px;
     }
-
     .price-badge {
       display: inline-block;
       background: #112240;
@@ -67,10 +79,7 @@
       font-weight: bold;
       display: block;
     }
-    .price-badge .label {
-      color: #aaa;
-      font-size: 0.9rem;
-    }
+    .price-badge .label { color: #aaa; font-size: 0.9rem; }
 
     .cta-btn {
       display: inline-block;
@@ -107,10 +116,7 @@
       align-items: flex-start;
       gap: 12px;
     }
-    .benefits ul li::before {
-      content: "✅";
-      flex-shrink: 0;
-    }
+    .benefits ul li::before { content: "✅"; flex-shrink: 0; }
 
     .how {
       background: #112240;
@@ -154,6 +160,7 @@
       color: #888;
       font-size: 0.85rem;
       margin-top: 14px;
+      line-height: 1.7;
     }
 
     footer {
@@ -170,11 +177,21 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <h1>Second Income Opportunities</h1>
     <p>Powered by Diamond Media Publishing LLC</p>
   </header>
 
+  <!-- BANNER -->
+  <div class="banner-wrap">
+    <img 
+      src="https://raw.githubusercontent.com/DiamondM-png/second-income-opportunities/main/banner.png" 
+      alt="Second Income Opportunities — Your AI-Powered Side Hustle Plan Starts Here"
+    />
+  </div>
+
+  <!-- HERO -->
   <div class="hero">
     <span class="tag">⚡ AI-Powered · Personalized · Delivered in 24hrs</span>
     <h2>Find Your Perfect Side Hustle With an <span>AI Audit Built For You</span></h2>
@@ -183,18 +200,17 @@
       schedule, and goals — then delivers your top 3 matched side hustles 
       with a personal 30-day action plan. No hype. No fluff. Just your plan.
     </p>
-
     <div class="price-badge">
       <span class="amount">$27</span>
       <span class="label">One-time · Delivered within 24 hours</span>
     </div>
     <br>
-    <!-- STRIPE $27 PAYMENT LINK -->
     <a href="https://buy.stripe.com/dRmeVe88eb847D1an67ss1c" class="cta-btn">
       👉 Get My AI Side Hustle Audit — $27
     </a>
   </div>
 
+  <!-- BENEFITS -->
   <div class="benefits">
     <h3>What You Get For $27</h3>
     <ul>
@@ -207,6 +223,7 @@
     </ul>
   </div>
 
+  <!-- HOW IT WORKS -->
   <div class="how">
     <h3>How It Works</h3>
     <div class="steps">
@@ -225,6 +242,7 @@
     </div>
   </div>
 
+  <!-- BOTTOM CTA -->
   <div class="cta-bottom">
     <a href="https://buy.stripe.com/dRmeVe88eb847D1an67ss1c" class="cta-btn">
       👉 Get My AI Side Hustle Audit — $27
@@ -235,6 +253,7 @@
     </p>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     © 2026 Second Income Opportunities —
     <a href="https://www.youtube.com/@SecondIncomeOpportunities">YouTube Channel</a><br>
