@@ -291,7 +291,6 @@
       <span class="desc">One-time · 30 minutes · Book instantly after payment</span>
     </div>
 
-    <!-- REPLACE HREF WITH STRIPE $97 PAYMENT LINK -->
     <a href="https://buy.stripe.com/00w4gAewCb843mL8eY7ss1b" class="cta-btn">
       👉 Yes — Book My Jumpstart Call for $97
     </a>
@@ -300,10 +299,32 @@
       No thanks — I'll figure it out on my own
     </span>
 
+    <script>
+      // Show Calendly widget after clicking $97 button
+      document.addEventListener('DOMContentLoaded', function() {
+        var params = new URLSearchParams(window.location.search);
+        if(params.get('booked') === 'true') {
+          document.getElementById('calendly-section').style.display = 'block';
+          document.getElementById('calendly-section').scrollIntoView();
+        }
+      });
+    </script>
+
     <div class="guarantee">
       🔒 All sales final. No refunds. Payment processed securely 
       by Diamond Media Publishing LLC via Stripe.
     </div>
+  </div>
+
+  <!-- CALENDLY BOOKING SECTION -->
+  <div id="calendly-section" style="display:none; background:#112240; border-top:3px solid #d4a017; padding:40px 20px; text-align:center;">
+    <h3 style="color:#d4a017; font-size:1.3rem; margin-bottom:10px;">📅 Book Your Jumpstart Call</h3>
+    <p style="color:#ccc; margin-bottom:24px;">Select a time that works for you — 30 minutes, no fluff, just your plan.</p>
+    <div class="calendly-inline-widget" 
+         data-url="https://calendly.com/ejarvis123/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0a1628&text_color=ffffff&primary_color=d4a017" 
+         style="min-width:320px;height:630px;">
+    </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
 
   <!-- SKIP ANCHOR -->
